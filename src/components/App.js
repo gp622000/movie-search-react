@@ -5,6 +5,7 @@ import MovieCard from './MovieCard';
 
 function App() {
   // console.log(data);
+  // console.log('calling from app.js')
   return (
     <div className="App">
      <Navbar />
@@ -15,8 +16,8 @@ function App() {
       </div>
 
       <div className="list">
-        {data.map((movie)=>{
-          return <MovieCard movie={movie} />
+        {data.map((movie,index)=>{
+          return <MovieCard movie={movie} key={`movies-${index}`} />
         })}
       </div>
      </div>
